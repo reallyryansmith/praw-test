@@ -6,9 +6,14 @@ pipeline {
         echo 'Start Pipeline'
       }
     }
-    stage('') {
+    stage('Uname') {
       steps {
         sh 'sudo uname -a'
+      }
+    }
+    stage('Install Pip') {
+      steps {
+        sh 'sudo yum install python-pip'
       }
     }
   }
