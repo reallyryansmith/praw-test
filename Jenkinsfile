@@ -16,5 +16,11 @@ pipeline {
         sh 'sudo yum install python-pip -y'
       }
     }
+    stage('Install PRAW via pip') {
+      steps {
+        sh '''sudo pip install praw
+'''
+      }
+    }
   }
 }
