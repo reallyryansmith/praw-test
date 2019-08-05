@@ -4,9 +4,9 @@ reddit = praw.Reddit('bot1', user_agent='myredditapp:v0.1 (by /u/AlbertoDorito)'
 
 keepchoosing = "y"
 while keepchoosing.lower() == "y":
-    choice = input("Would you like to see?: \n "
+    choice = int(input("Would you like to see?: \n "
                    "the top comments from one thread where a guy wears a fire Ness inspired outfit (Press 1 and hit enter)\n "
-                   "or would you rather see the top 10 HOT submissions from /r/learnpython? (Press 2 and hit enter)\n ")
+                   "or would you rather see the top 10 HOT submissions from /r/learnpython? (Press 2 and hit enter)\n "))
     submission2 = reddit.submission(
         url='https://www.reddit.com/r/streetwear/comments/c3sj01/wdywt_low_quality_ness_cosplay/')
 
