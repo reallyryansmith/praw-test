@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Install Pip') {
       steps {
-        sh 'sudo yum install python-pip'
+        sh 'sudo yum install python-pip -y'
       }
     }
   }
