@@ -12,14 +12,17 @@ pipeline {
       }
     }
     stage('Install Pip') {
-      steps {
-        sh 'sudo yum install python-pip -y'
-      }
-    }
-    stage('Install PRAW via pip') {
-      steps {
-        sh '''sudo pip install praw
-'''
+      parallel {
+        stage('Install Pip') {
+          steps {
+            sh 'sudo yum install python-pip -y'
+          }
+        }
+        stage('Install PRAW via pip') {
+          steps {
+            sh 'sudo pip install praw'
+          }
+        }
       }
     }
   }
