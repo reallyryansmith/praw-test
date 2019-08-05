@@ -25,9 +25,9 @@ pipeline {
         }
       }
     }
-    stage('Run Script') {
+    stage('') {
       steps {
-        sh 'sudo python praw-tutorial.py'
+        pwd()
       }
     }
   }
